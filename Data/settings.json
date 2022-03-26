@@ -1,0 +1,11 @@
+{
+  "GlobalSettings": null,
+  "SnapOCRSettings": {
+	  "SnapOCREnabled": true,
+	  "ControlKeyCode": 2,
+	  "Keys": 77,
+	  "API": "Tencent",
+	  "SecretID": "",
+	  "SecretKey": ""
+  }
+}

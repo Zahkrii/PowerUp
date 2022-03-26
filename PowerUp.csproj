@@ -1,0 +1,55 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<OutputType>WinExe</OutputType>
+		<TargetFramework>net6.0-windows</TargetFramework>
+		<Nullable>enable</Nullable>
+		<UseWPF>true</UseWPF>
+		<UseWindowsForms>true</UseWindowsForms>
+		<StartupObject></StartupObject>
+		<Platforms>AnyCPU;x86</Platforms>
+	</PropertyGroup>
+
+	<ItemGroup>
+	  <Compile Remove="Assets\**" />
+	  <EmbeddedResource Remove="Assets\**" />
+	  <None Remove="Assets\**" />
+	  <Page Remove="Assets\**" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Remove="Data\settings.json" />
+	  <None Remove="Resources\Font Awesome 6 Brands-Regular-400.otf" />
+	  <None Remove="Resources\Font Awesome 6 Free-Regular-400.otf" />
+	  <None Remove="Resources\Font Awesome 6 Free-Solid-900.otf" />
+	  <None Remove="Resources\icon.ico" />
+	  <None Remove="Resources\icon.png" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <EmbeddedResource Include="Data\settings.json">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </EmbeddedResource>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Resource Include="Resources\Font Awesome 6 Brands-Regular-400.otf" />
+	  <Resource Include="Resources\Font Awesome 6 Free-Regular-400.otf" />
+	  <Resource Include="Resources\Font Awesome 6 Free-Solid-900.otf" />
+	  <Resource Include="Resources\icon.ico" />
+	  <Resource Include="Resources\icon.png" />
+	  <Resource Include="Resources\logo_dark.png" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="HandyControl" Version="3.3.0" />
+		<PackageReference Include="TencentCloudSDK.Common" Version="3.0.478" />
+		<PackageReference Include="TencentCloudSDK.Ocr" Version="3.0.478" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Resource Include="Resources\logo_light.png">
+	    <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+	  </Resource>
+	</ItemGroup>
+</Project>

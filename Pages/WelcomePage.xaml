@@ -1,0 +1,36 @@
+﻿<Page x:Class="PowerUp.Pages.WelcomePage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:local="clr-namespace:PowerUp.Pages"
+      xmlns:hc="https://handyorg.github.io/handycontrol"
+      mc:Ignorable="d"
+      d:DesignHeight="563" d:DesignWidth="635"
+      Title="Welcome">
+    <Grid>
+        <hc:SimpleStackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center" MaxWidth="800">
+            <Image RenderOptions.BitmapScalingMode="HighQuality"  Source="pack://application:,,,/Resources/logo_light.png" />
+            <hc:SimpleStackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <Button Margin="10,0,0,0" Height="36">
+                    <hc:SimpleStackPanel Orientation="Horizontal">
+                        <TextBlock Text="&#xf09b;" FontSize="20" FontFamily="{StaticResource FontAwesomeBrands}" />
+                        <TextBlock Text="GitHub" Margin="8 0 0 0" VerticalAlignment="Center" />
+                    </hc:SimpleStackPanel>
+                </Button>
+                <Button Margin="10,0,0,0" Height="36">
+                    <hc:SimpleStackPanel Orientation="Horizontal">
+                        <Path Style="{StaticResource HeartFillIcon}" Fill="#E74C3C" />
+                        <TextBlock Text="Donate" Margin="8 0 0 0" VerticalAlignment="Center" />
+                    </hc:SimpleStackPanel>
+                </Button>
+                <Button Margin="10,0,0,0" Height="36">
+                    <hc:SimpleStackPanel Orientation="Horizontal">
+                        <Path Style="{StaticResource UpdateIcon}" Fill="Black" Stretch="Fill" Width="18" Height="18" />
+                        <TextBlock Text="Check for Update" Margin="8 0 0 0" VerticalAlignment="Center" />
+                    </hc:SimpleStackPanel>
+                </Button>
+            </hc:SimpleStackPanel>
+        </hc:SimpleStackPanel>
+    </Grid>
+</Page>
