@@ -24,7 +24,8 @@ namespace PowerUp.Tools
         public SnapOCR()
         {
             Screenshot.Snapped += Screenshot_Snapped;
-            resultWindow = new OCRWindow();
+            if (resultWindow == null)
+                resultWindow = new OCRWindow();
         }
 
         public void Snap()

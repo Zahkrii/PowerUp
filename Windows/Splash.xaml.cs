@@ -21,6 +21,8 @@ namespace PowerUp.Windows
     /// </summary>
     public partial class Splash : Window
     {
+        private SnapOCR snapOCR;
+
         public Splash()
         {
             InitializeComponent();
@@ -39,6 +41,7 @@ namespace PowerUp.Windows
             }
             if (SettingsTool.Instance.AppSettings.SnapOCRSettings.SnapOCREnabled)
             {
+                snapOCR = new SnapOCR();
                 Hotkey hot = new Hotkey(this, SettingsTool.Instance.AppSettings.SnapOCRSettings.ControlKeyCode, SettingsTool.Instance.AppSettings.SnapOCRSettings.Keys);
                 hot.OnHotKey += SnapOCROnHotKey;
             }
@@ -58,7 +61,6 @@ namespace PowerUp.Windows
             }
             else
             {
-                SnapOCR snapOCR = new SnapOCR();
                 snapOCR.Snap();
             }
         }

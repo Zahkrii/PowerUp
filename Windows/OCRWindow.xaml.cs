@@ -39,5 +39,20 @@ namespace PowerUp.Windows
         {
             SnapImage.Source = screenshot;
         }
+
+        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            e.Cancel = true;
+            this.Hide();
+        }
+
+        private void Window_IsVisibleChanged(object sender, DependencyPropertyChangedEventArgs e)
+        {
+            if (this.Visibility != Visibility.Visible)
+            {
+                DetectedTextBox.Visibility = Visibility.Collapsed;
+                LoadingBar.Visibility = Visibility.Visible;
+            }
+        }
     }
 }

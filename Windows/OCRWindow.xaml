@@ -7,7 +7,7 @@
         xmlns:hc="https://handyorg.github.io/handycontrol"
         mc:Ignorable="d"
         Icon="pack://application:,,,/Resources/icon.png"
-        Title="Snap OCR" Height="200" Width="450" Topmost="True" SizeToContent="WidthAndHeight" WindowStartupLocation="CenterScreen" ResizeMode="CanMinimize">
+        Title="Snap OCR" Height="200" Width="450" Topmost="True" SizeToContent="WidthAndHeight" WindowStartupLocation="CenterScreen" ResizeMode="CanMinimize" Closing="Window_Closing" IsVisibleChanged="Window_IsVisibleChanged">
     <Grid>
         <hc:TransitioningContentControl TransitionMode="Bottom2TopWithFade">
             <hc:SimpleStackPanel>
